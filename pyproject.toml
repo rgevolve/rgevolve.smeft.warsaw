@@ -12,8 +12,7 @@ description = "Package providing Renormalization Group Evolution Matrices for th
 requires-python = ">=3.8"
 license = {text = "MIT"}
 dependencies = [
-    "numpy",
-    "scipy",
+    "rgevolve"
 ]
 dynamic = ["version"]
 
@@ -23,3 +22,6 @@ include = ["rgevolve.smeft.warsaw"]
 
 [tool.setuptools.dynamic]
 version = {attr = "rgevolve.smeft.warsaw.__version__"}
+
+[tool.setuptools.package-data]
+"rgevolve.smeft.warsaw" = ["data.h5"]
