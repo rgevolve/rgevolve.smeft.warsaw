@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools >= 61.0"]
+requires = ["setuptools >= 64.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -21,7 +21,7 @@ where = ["src/"]
 include = ["rgevolve.smeft.warsaw"]
 
 [tool.setuptools.dynamic]
-version = {attr = "rgevolve.smeft.warsaw.__version__"}
+version = {attr = "rgevolve.smeft.warsaw._version.__version__"}
 
 [tool.setuptools.package-data]
 "rgevolve.smeft.warsaw" = ["data.h5"]
