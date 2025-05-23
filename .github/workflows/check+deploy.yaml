@@ -73,6 +73,8 @@ jobs:
                 export SRC_VERSION=$(python3 -c "from rgevolve.smeft.warsaw._version import __version__; print(__version__)")
                 if [[ ${TAG_VERSION} != ${SRC_VERSION} ]] ; then
                   echo "tag/release version and source code version disagree, exiting"
+                  echo "tag/release version: ${TAG_VERSION}"
+                  echo "source code version: ${SRC_VERSION}"
                   exit 1
                 fi
                 popd
